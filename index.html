@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- must be w/in first 500 characters on website  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wealth Bar TFSA and RRSP Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="./build/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./pure-release-0.6.1">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="hidden">WealthBar TFSA RRSP Calculator</h1>
+    <!-- HEADER -->
+
+    <header class="topNav">
+        <div class="logo">
+
+            <a href="#"><img src="diamond.png" alt="wealth logo" /></a>
+        </div>
+    </header>
+    <!-- BODY -->
+    <section class="calculations ">
+        <form class="">
+            <fieldset>
+                <legend>WealthBar | TFSA & RRSP Compare Calculator</legend>
+
+                <div class="">
+
+                    <div class="">
+                        <label for="deposit">Amount of Deposit</label>
+                        <input id="deposit" id="deposited-amount" type="text" placeholder="$1000">
+                    </div>
+
+                    <div class="">
+                        <label for="investment-period">Years Invested</label>
+                        <input id="investment-period" id="years-invested" type="text">
+                    </div>
+
+                    <div class="">
+                        <label for="roi">Return on Investment</label>
+                        <input id="roi" id="return-on-investment" type="text" placeholder="6%">
+                    </div>
+                    <div class="inflation-amount">
+                        <label for="inflation-rate">Inflation Rate</label>
+                        <p>2%</p>
+                        <!--<input id="inflation-rate" id="inflation-rate" type="text" placeholder="2%">-->
+                    </div>
+                    <div class="">
+                        <label for="tax-rate">Current Marginal Tax Rate</label>
+                        <select id="tax-rate" class="">
+                           <option value="choose">choose income bracket:</option>
+                            <option value=".2206">first $38,210 - 20.06%</option>
+                            <option value=".2270">over $38,210 up to $45,282 - 22.70%</option>
+                            <option value=".2820">over $45,282 up to $76,421 - 28.20%</option>
+                            <option value=".3100">over $76,421 up to $87,741 - 31.00%</option>
+                            <option value=".3279">over $87,741 up to $90,563 - 32.79%</option>
+                            <option value=".3829">over $90,563 up to $106,543 - 38.29%</option>
+                            <option value=".4070">over $106,543 up to $140,388 - 40.70%</option>
+                            <option value=".4370">over $140,388 up to $200,000 - 43.70%</option>
+                            <option value=".4770">over $200,000 - 47.70%</option>
+                    </select>
+                    </div>
+                    <div class="">
+                        <label for="retirement-tax-rate">Average Tax Rate at Retirement</label>
+                        <input id="retirement-tax-rate" class="" type="text" placeholder="8%">
+                    </div>
+                </div>
+                <button type="submit" class="submit">Calculate</button>
+            </fieldset>
+        </form>
+    </section>
+    <section class="calculator-output">
+        <div>
+            <br/>
+            <ul>
+                <li>Pre-tax income</li>
+                <li>After-tax savings</li>
+                <li>Future Value of Savings</li>
+                <li>Tax paid upon withdrawal</li>
+                <li>After-tax of Future Value of savings</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>TFSA</h2>
+            <ul>
+                <li id="tfsa-pre-tax-income"></li>
+                <li id="tfsa-after-tax-savings"></li>
+                <li id="tfsa-fv-savings"></li>
+                <li id="tfsa-withdrawal-tax-rate"></li>
+                <li id="tfsa-after-tax-fv-savings"></li>
+            </ul>
+        </div>
+        <div>
+            <h2>RRSP</h2>
+            <ul>
+                <li id="rrsp-pre-tax-income"></li>
+                <li id="rrsp-after-tax-savings"></li>
+                <li id="rrsp-fv-savings"></li>
+                <li id="rrsp-withdrawal-tax-rate"></li>
+                <li id="rrsp-after-tax-fv-savings"></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer-info container">
+        <div class="contact">
+            <p>&copy; WealthBar 2016</p>
+            <p>+1.888.373.7674 <a href="mailto:info@wealthbar.com">info@wealthbar.com</a></p><br>
+            <p class="address">#490 - 1122 Mainland Street<br>Vancouver, BC Canada , V6B 5L1</p>
+        </div>
+        <div class="resource-links">
+            <h2>Resources</h2>
+            <ul class="resources">
+                <li><a href="https://www.focus-economics.com/country-indicator/canada/inflation"><i class="fa fa-bar-chart" aria-hidden="true"></i> <span>Focus-Economics</span></a></li>
+                <li><a href="http://www.theglobeandmail.com/globe-investor/personal-finance/the-wealthy-barber-explains-tfsa-or-rrsp/article1356709/?page=all"><i class="fa fa-globe" aria-hidden="true"></i> <span>Globe & Mail</span></a></li>
+                <li><a href="http://www.taxtips.ca/taxrates/bc.htm"><i class="fa fa-info" aria-hidden="true"></i> <span>Tax Tips</span></a></li>
+                <li><a href="http://www.financeformulas.net/Real_Rate_of_Return.html"><i class="fa fa-flask" aria-hidden="true"></i> <span>Finance Formulas</span></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="./build/js/script.min.js"></script>
+
+
+</body>
+
+</html>

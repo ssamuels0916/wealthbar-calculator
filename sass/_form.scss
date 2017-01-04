@@ -1,0 +1,25 @@
+legend {
+    font-size: 1.3rem;
+    padding: 0 15px;
+}
+
+.calculations {
+    margin: 5%;
+}
+
+.calculator-output {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5% 2% 5%;
+    width: 80%;
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+.inflation-amount {
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+}

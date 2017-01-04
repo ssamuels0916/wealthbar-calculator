@@ -1,0 +1,46 @@
+    * {
+        box-sizing: border-box;
+        outline: none;
+    }
+    
+    body {
+        line-height: 2;
+        font-family: 'Raleway', 'Garamond', sans-serif;
+    }
+    
+    html {
+        color: #2d2d2d;
+        font-size: 14px;
+    }
+    
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+    
+    * a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .container {
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        @include tablet {
+            max-width: 1400px;
+        }
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    .submit {
+        background-color: #00B298;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        margin-top: 15px;
+    }
