@@ -1,8 +1,7 @@
 
-## Project Name: Wealth bar TFSA | RRSP Comparison Calculator
+## Project Name: WealthBar TFSA | RRSP Comparison Calculator
 
-The second phase of this project involved responsive design using media queries, creating a flexible layout using Flexbox's properties and adding photo galleries using Flickity a jQuery plugin.
-
+A financial comparison calculator used to help a user decide between investing in a TFSA account versus a RRSP account. 
 ![front-page](https://cloud.githubusercontent.com/assets/22157084/21630544/156a4274-d1e7-11e6-9035-e872b3e728af.png)
 
 ## Languages and Tools Used
