@@ -1,5 +1,5 @@
 
-## Project Name: Wealth bar TFSA| RRSP Comparison Calculator
+## Project Name: Wealth bar TFSA | RRSP Comparison Calculator
 
 The second phase of this project involved responsive design using media queries, creating a flexible layout using Flexbox's properties and adding photo galleries using Flickity a jQuery plugin.
 
