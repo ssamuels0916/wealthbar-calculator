@@ -12,5 +12,5 @@ The second phase of this project involved responsive design using media queries,
 4. Javascript and JQuery
 
 ## Learnings
-Using various financial calculators and metrics based on income and inflation, this tool is meant to offer a simple comparison between saving one's money in a TFSA versus a RRSP investment account.
+Using various financial calculators and metrics based on income and factors such as inflation, this tool is meant to offer a simple comparison between saving one's money in a TFSA versus a RRSP investment account.
 This tool is meant to illustrate the differences between the two forms of long term investments, but one should still consider other factors when making an investment decision.
