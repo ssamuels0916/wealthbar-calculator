@@ -13,3 +13,9 @@ A financial comparison calculator used to help a user decide between investing i
 ## Learnings
 Using various financial calculators and metrics based on income and factors such as inflation, this tool is meant to offer a simple comparison between saving one's money in a TFSA versus a RRSP investment account.
 This tool is meant to illustrate the differences between the two forms of long term investments, but one should still consider other factors when making an investment decision.
+
+## Instructions
+To view site locally:
+1. Clone repository
+2. NPM install in your terminal 
+3. Run gulp
