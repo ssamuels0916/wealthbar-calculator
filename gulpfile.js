@@ -1,6 +1,4 @@
-var gulp = require('gulp'), //allows us to use all dependencies for gulp on front end
-    // Now that we've installed the uglify package we can require it:
-    //only need to declare once by ading comma after first variable
+var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create(),
@@ -83,15 +81,11 @@ gulp.task('lint', function() {
         ])
         .pipe(plumber())
 
-    // eslint() attaches the lint output to the "eslint" property 
-    // of the file object so it can be used by other modules. 
     .pipe(eslint())
-        // eslint.format() outputs the lint results to the console. 
-        // Alternatively use eslint.formatEach() (see Docs). 
-        .pipe(eslint.format())
-        // To have the process exit with an error code (1) on 
-        // lint error, return the stream and pipe to failAfterError last. 
-        .pipe(eslint.failAfterError());
+
+    .pipe(eslint.format())
+
+    .pipe(eslint.failAfterError());
 });
 
 

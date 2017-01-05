@@ -38,7 +38,7 @@ $(function() {
         $('#rrsp-withdrawal-tax-rate').text(retirementTaxRate).append("%");
 
         //calculate after tax savings
-        var afterTaxFutureValue = ((rrspFutureValue - (rrspFutureValue * retirementTaxPercentage)).toFixed(2)).replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        var afterTaxFutureValue = ((rrspFutureValue - (rrspFutureValue * retirementTaxPercentage)).toFixed(2));
         $('#rrsp-after-tax-fv-savings').text(afterTaxFutureValue).prepend("$ ");
         $('#tfsa-after-tax-fv-savings').text(tfsaFutureValue).prepend("$ ");
 
