@@ -41,11 +41,5 @@ $(function() {
         var afterTaxFutureValue = ((rrspFutureValue - (rrspFutureValue * retirementTaxPercentage)).toFixed(2));
         $('#rrsp-after-tax-fv-savings').text(afterTaxFutureValue).prepend("$ ");
         $('#tfsa-after-tax-fv-savings').text(tfsaFutureValue).prepend("$ ");
-
-
-
     });
-
-
-
 });
