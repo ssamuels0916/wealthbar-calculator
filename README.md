@@ -2,8 +2,7 @@
 ## Project Name: WealthBar TFSA | RRSP Comparison Calculator
 
 A financial comparison calculator used to help a user decide between investing in a TFSA account versus a RRSP account. 
-![frontpage](https://cloud.githubusercontent.com/assets/22157084/21672105/d6af32a8-d2d4-11e6-86d0-8fe0c7162617.png)
-
+![frontpage_right](https://cloud.githubusercontent.com/assets/22157084/21674613/55bd580a-d2e3-11e6-800e-85586851a2ee.png)
 
 ## Languages and Tools Used
 1. HTML5
