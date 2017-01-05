@@ -432,6 +432,12 @@ img {
   text-decoration: none;
   color: inherit; }
 
+p,
+h1,
+h2,
+h3 {
+  color: #303030; }
+
 .container {
   margin: 0 auto;
   max-width: 600px;
@@ -452,7 +458,41 @@ img {
   color: white;
   border-radius: 5px;
   border: none;
-  margin-top: 15px; }
+  margin-top: 15px;
+  width: 100px;
+  border-bottom: 2px solid #1b7368; }
+  .submit:hover {
+    background-color: #007f6c; }
+
+.getStarted {
+  text-align: center;
+  width: 200px;
+  padding: 4px;
+  font-size: 1.2rem; }
+
+table {
+  font-family: 'Raleway', 'Garamond', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 2px 4px 3px #eee; }
+
+td {
+  width: 30%; }
+
+th {
+  font-size: 1.3rem; }
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px; }
+  td:first-child,
+  th:first-child {
+    text-align: left; }
+
+tr:nth-child(even) {
+  background-color: #F3F3F3; }
 
 /***********HEADER**************/
 .hidden {
@@ -469,9 +509,6 @@ img {
   background-color: white;
   width: 100%;
   z-index: 4; }
-  @media (min-width: 600px) {
-    .topNav {
-      height: 70px; } }
   @media (min-width: 1240px) {
     .topNav {
       background-color: transparent; } }
@@ -488,7 +525,15 @@ img {
 
 legend {
   font-size: 1.3rem;
-  padding: 0 15px; }
+  padding: 0 1.25rem; }
+
+label,
+input,
+select {
+  font-size: .95rem; }
+
+fieldset {
+  box-shadow: 2px 4px 2px #ddd; }
 
 .calculations {
   margin: 5%; }
@@ -500,17 +545,90 @@ legend {
       flex-direction: row;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 0 5% 2% 5%;
-  width: 80%; }
+  padding: 0 5% 2% 5%; }
   .calculator-output h2 {
     font-size: 1.3rem; }
 
 .inflation-amount {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  width: 13%; }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 18%; }
+
+.input-fields {
+  padding-bottom: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  /* CSS animation */ }
+  .input-fields .input-field {
+    position: relative;
+    margin-right: 1.5rem; }
+    .input-fields .input-field:last-child {
+      padding-right: 0; }
+  .input-fields .return {
+    padding-right: 1rem; }
+  .input-fields .helpful-tip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background-color: #00b298;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: .8rem;
+    line-height: 16px;
+    cursor: default; }
+    .input-fields .helpful-tip a:hover {
+      color: #00b298; }
+  .input-fields .helpful-tip:before {
+    content: '?';
+    font-weight: bold;
+    color: #fff; }
+  .input-fields .helpful-tip:hover p {
+    display: block;
+    transform-origin: 0% 50%;
+    animation: fadeIn 0.3s ease-in-out; }
+  .input-fields .helpful-tip p {
+    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 10px;
+    width: 250px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    left: 0;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+    z-index: 99; }
+  .input-fields .helpful-tip p:before {
+    /*  tooltip pointer */
+    position: top;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-color: #1E2021;
+    right: 10px;
+    top: -12px; }
+  .input-fields .helpful-tip p:after {
+    /* Prevents  tooltip from being hidden */
+    width: 100%;
+    height: 40px;
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
 
 /****************FOOTER STARTS***********************/
 @media (min-width: 600px) {
@@ -535,6 +653,8 @@ footer.container {
   font-style: normal;
   font-size: 1.2rem;
   margin-bottom: 5%; }
+  .contact p {
+    color: white; }
   .contact p.address {
     color: white; }
   @media (min-width: 600px) {
@@ -564,8 +684,6 @@ s .address {
   -ms-flex-pack: center;
       justify-content: center;
   color: white; }
-  .resources li {
-    padding: 2%; }
 
 /*** resources icons **/
 .fa {
@@ -592,5 +710,28 @@ s .address {
 .resources a:hover {
   color: #b64036;
   text-decoration: none; }
+
+.disclaimer {
+  text-align: center;
+  font-size: .9rem;
+  margin-bottom: 1rem; }
+
+.advisor {
+  margin: 3rem 0 6rem;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center; }
+  .advisor h3 {
+    font-size: 2rem; }
+  .advisor p {
+    font-size: 1.2rem; }
+
+.intro {
+  margin: 2rem 0 1rem; }
 
 /****************FOOTER ENDS***********************/

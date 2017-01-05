@@ -1,6 +1,17 @@
 legend {
     font-size: 1.3rem;
-    padding: 0 15px;
+    padding: 0 1.25rem;
+    ;
+}
+
+label,
+input,
+select {
+    font-size: .95rem;
+}
+
+fieldset {
+    box-shadow: 2px 4px 2px #ddd;
 }
 
 .calculations {
@@ -12,7 +23,6 @@ legend {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 5% 2% 5%;
-    width: 80%;
     h2 {
         font-size: 1.3rem;
     }
@@ -20,6 +30,103 @@ legend {
 
 .inflation-amount {
     display: flex;
-    justify-content: space-between;
-    width: 13%;
+    flex-direction: column;
+    width: 18%;
+}
+
+.input-fields {
+    padding-bottom: 1rem;
+    display: flex;
+    .input-field {
+        position: relative;
+        margin-right: 1.5rem;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    .return {
+        padding-right: 1rem;
+    }
+    .helpful-tip {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        background-color: #00b298;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        font-size: .8rem;
+        line-height: 16px;
+        cursor: default;
+        a:hover {
+            color: #00b298;
+        }
+    }
+    .helpful-tip:before {
+        content: '?';
+        font-weight: bold;
+        color: #fff;
+    }
+    .helpful-tip:hover p {
+        display: block;
+        transform-origin: 0% 50%;
+        -webkit-animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    .helpful-tip p {
+        /* The tooltip */
+        display: none;
+        text-align: left;
+        background-color: #1E2021;
+        padding: 10px;
+        width: 250px;
+        position: absolute;
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        left: 0;
+        color: #FFF;
+        font-size: 13px;
+        line-height: 1.4;
+        z-index: 99;
+    }
+    .helpful-tip p:before {
+        /*  tooltip pointer */
+        position: top;
+        content: '';
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-bottom-color: #1E2021;
+        right: 10px;
+        top: -12px;
+    }
+    .helpful-tip p:after {
+        /* Prevents  tooltip from being hidden */
+        width: 100%;
+        height: 40px;
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 0;
+    }
+    /* CSS animation */
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.6);
+        }
+        100% {
+            opacity: 100%;
+            transform: scale(1);
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
 }

@@ -25,35 +25,49 @@
         </div>
     </header>
     <!-- BODY -->
+    <section>
+        <div class="advisor intro">
+            <h3>Start investing today!</h3>
+            <p>Decide which investment tool is best for you. Enter your details below:</p>
+        </div>
+    </section>
     <section class="calculations ">
-        <form class="">
+        <form>
             <fieldset>
                 <legend>WealthBar | TFSA & RRSP Comparison Calculator</legend>
 
                 <div class="input-fields">
 
-                    <div>
-                        <label for="deposit">Amount of Deposit</label>
-                        <input id="deposit" id="deposited-amount" type="text" placeholder="$1000">
+                    <div class="input-field">
+                        <label for="deposit">Amount of Deposit: ($)</label>
+                        <input id="deposit" id="deposited-amount" type="text" placeholder="1000">
+
                     </div>
 
-                    <div>
-                        <label for="investment-period">Years Invested</label>
+                    <div class="input-field">
+                        <label for="investment-period">Years Invested:</label>
                         <input id="investment-period" id="years-invested" type="text">
+
                     </div>
 
-                    <div>
-                        <label for="roi">Return on Investment</label>
-                        <input id="roi" id="return-on-investment" type="text" placeholder="6%">
+                    <div class="input-field return">
+                        <label for="roi">Annual rate of return: (%)</label>
+                        <input id="roi" id="return-on-investment" type="text" placeholder="5.4">
+                        <div class="helpful-tip">
+                            <p>The average of 5.40% is an estimate of 10-year annualized returns for a balanced investment portfolio of 60% stocks and 40% bonds. Past performance is no guarantee of future results.</p>
+                        </div>
                     </div>
-                    <div class="inflation-amount">
-                        <label for="inflation-rate">Inflation Rate</label>
+                    <div class="input-field inflation-amount ">
+                        <label for="inflation-rate">Inflation Rate:</label>
                         <p>2%</p>
+                        <div class="helpful-tip">
+                            <p>For 2017, the Bank of Canada expects inflation to close the year at 2.0%</p>
+                        </div>
                     </div>
-                    <div>
-                        <label for="tax-rate">Current Marginal Tax Rate</label>
+                    <div class="input-field">
+                        <label for="tax-rate">Current Marginal Tax Rate:</label>
                         <select id="tax-rate" class="">
-                           <option value="choose">choose income bracket:</option>
+                           <option value="choose">Choose income bracket:</option>
                             <option value=".2206">first $38,210 - 20.06%</option>
                             <option value=".2270">over $38,210 up to $45,282 - 22.70%</option>
                             <option value=".2820">over $45,282 up to $76,421 - 28.20%</option>
@@ -64,9 +78,12 @@
                             <option value=".4370">over $140,388 up to $200,000 - 43.70%</option>
                             <option value=".4770">over $200,000 - 47.70%</option>
                     </select>
+                        <div class="helpful-tip">
+                            <p>The rate of tax charged on the last dollar of income. The chart includes combined Federal and Provincial/Territorial marginal tax rates for British Columbia. For other provinces, see provincial rates here: <a href="http://www.taxtips.ca/marginaltaxrates.htm">Tax tips</a>                                </p>
+                        </div>
                     </div>
-                    <div>
-                        <label for="retirement-tax-rate">Average Tax Rate at Retirement</label>
+                    <div class="input-field">
+                        <label for="retirement-tax-rate">Tax Rate at Retirement:</label>
                         <input id="retirement-tax-rate" class="" type="text" placeholder="8%">
                     </div>
                 </div>
@@ -75,36 +92,46 @@
         </form>
     </section>
     <section class="calculator-output">
-        <div>
-            <br/>
-            <ul>
-                <li>Pre-tax income:</li>
-                <li>After-tax savings:</li>
-                <li>Future Value of your savings:</li>
-                <li>Tax paid upon withdrawal:</li>
-                <li>After-tax future value of your investment:</li>
-            </ul>
+        <table>
+            <tr>
+                <th></th>
+                <th>TFSA</th>
+                <th>RRSP</th>
+            </tr>
+            <tr>
+                <td>Pre-tax income:</td>
+                <td id="tfsa-pre-tax-income"></td>
+                <td id="rrsp-pre-tax-income"></td>
+            </tr>
+            <tr>
+                <td>After-tax savings:</td>
+                <td id="tfsa-after-tax-savings"></td>
+                <td id="rrsp-after-tax-savings"></td>
+            </tr>
+            <tr>
+                <td>Future Value of your savings:</td>
+                <td id="tfsa-fv-savings"></td>
+                <td id="rrsp-fv-savings"></td>
+            </tr>
+            <tr>
+                <td>Tax paid upon withdrawal:</td>
+                <td id="tfsa-withdrawal-tax-rate"></td>
+                <td id="rrsp-withdrawal-tax-rate"></td>
+            </tr>
+            <tr>
+                <td>After-tax future value of your investment:</td>
+                <td id="tfsa-after-tax-fv-savings"></td>
+                <td id="rrsp-after-tax-fv-savings"></td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <div class="advisor">
+            <h3>Start investing today!</h3>
+            <a href="#" class="submit getStarted">Get Started</a>
         </div>
-
-        <div>
-            <h2>TFSA</h2>
-            <ul>
-                <li id="tfsa-pre-tax-income"></li>
-                <li id="tfsa-after-tax-savings"></li>
-                <li id="tfsa-fv-savings"></li>
-                <li id="tfsa-withdrawal-tax-rate"></li>
-                <li id="tfsa-after-tax-fv-savings"></li>
-            </ul>
-        </div>
-        <div>
-            <h2>RRSP</h2>
-            <ul>
-                <li id="rrsp-pre-tax-income"></li>
-                <li id="rrsp-after-tax-savings"></li>
-                <li id="rrsp-fv-savings"></li>
-                <li id="rrsp-withdrawal-tax-rate"></li>
-                <li id="rrsp-after-tax-fv-savings"></li>
-            </ul>
+        <div class="disclaimer">
+            <p>*Please note this calculator is for informational purposes only, speak to one of our advisors for more information. </p>
         </div>
     </section>
 
@@ -124,6 +151,7 @@
                 <li><a href="http://www.theglobeandmail.com/globe-investor/personal-finance/the-wealthy-barber-explains-tfsa-or-rrsp/article1356709/?page=all"><i class="fa fa-globe" aria-hidden="true"></i> <span>Globe & Mail</span></a></li>
                 <li><a href="http://www.taxtips.ca/taxrates/bc.htm"><i class="fa fa-info" aria-hidden="true"></i> <span>Tax Tips</span></a></li>
                 <li><a href="http://www.financeformulas.net/Real_Rate_of_Return.html"><i class="fa fa-flask" aria-hidden="true"></i> <span>Finance Formulas</span></a></li>
+                <li><a href="http://www.moneysense.ca/invest/your-expected-rate-of-return/"><i class="fa fa-money" aria-hidden="true"></i> <span>Money Sense</span></a></li>
             </ul>
         </div>
     </footer>

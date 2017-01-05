@@ -1,12 +1,12 @@
 $(function() {
 
-    //display amount deposited in pre-tax income 
-    $("#deposit").change(function() {
-        $('#tfsa-pre-tax-income, #rrsp-pre-tax-income').text($(this).val()).prepend("$ ");
-    });
+
 
     $('.submit').on('click', function(event) {
         event.preventDefault();
+        //display amount deposited in pre-tax income 
+        $('#tfsa-pre-tax-income, #rrsp-pre-tax-income').text($('#deposit').val()).prepend("$ ");
+
         var deposit = $('#deposit').val();
         var marginalTax = $("#tax-rate option:selected").val();
         var afterTaxSavings = deposit - (deposit * marginalTax);
