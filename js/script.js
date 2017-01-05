@@ -4,12 +4,13 @@ $(function() {
 
     $('.submit').on('click', function(event) {
         event.preventDefault();
+
         //display amount deposited in pre-tax income 
         $('#tfsa-pre-tax-income, #rrsp-pre-tax-income').text($('#deposit').val()).prepend("$ ");
 
         var deposit = $('#deposit').val();
         var marginalTax = $("#tax-rate option:selected").val();
-        var afterTaxSavings = deposit - (deposit * marginalTax);
+        var afterTaxSavings = (deposit - (deposit * marginalTax)).toFixed(2);
         $('#tfsa-after-tax-savings').text(afterTaxSavings).prepend("$ ");
         $('#rrsp-after-tax-savings').text(deposit).prepend("$ ");
 
@@ -37,11 +38,14 @@ $(function() {
         $('#rrsp-withdrawal-tax-rate').text(retirementTaxRate).append("%");
 
         //calculate after tax savings
-        var afterTaxFutureValue = (rrspFutureValue - (rrspFutureValue * retirementTaxPercentage)).toFixed(2);
+        var afterTaxFutureValue = ((rrspFutureValue - (rrspFutureValue * retirementTaxPercentage)).toFixed(2)).replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         $('#rrsp-after-tax-fv-savings').text(afterTaxFutureValue).prepend("$ ");
         $('#tfsa-after-tax-fv-savings').text(tfsaFutureValue).prepend("$ ");
+
+
+
     });
 
-    //results
+
 
 });
