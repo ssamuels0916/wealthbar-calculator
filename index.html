@@ -31,7 +31,7 @@
         </div>
     </section>
     <section class="calculations ">
-        <form>
+        <form class="form">
             <fieldset>
                 <legend>WealthBar | TFSA & RRSP Comparison Calculator</legend>
 
@@ -39,19 +39,18 @@
 
                     <div class="input-field">
                         <label for="deposit">Amount of Deposit: ($)</label>
-                        <input id="deposit" id="deposited-amount" type="text" placeholder="1000">
-
+                        <input id="deposit" type="text" placeholder="1000" required/>
                     </div>
 
                     <div class="input-field">
                         <label for="investment-period">Years Invested:</label>
-                        <input id="investment-period" id="years-invested" type="text">
+                        <input id="investment-period" id="years-invested" type="text" />
 
                     </div>
 
                     <div class="input-field return">
                         <label for="roi">Annual rate of return: (%)</label>
-                        <input id="roi" id="return-on-investment" type="text" placeholder="5.4">
+                        <input id="roi" id="return-on-investment" type="text" placeholder="5.4" />
                         <div class="helpful-tip">
                             <p>The average of 5.40% is an estimate of 10-year annualized returns for a balanced investment portfolio of 60% stocks and 40% bonds. Past performance is no guarantee of future results.</p>
                         </div>
@@ -83,7 +82,7 @@
                     </div>
                     <div class="input-field">
                         <label for="retirement-tax-rate">Tax Rate at Retirement:</label>
-                        <input id="retirement-tax-rate" class="" type="text" placeholder="8%">
+                        <input id="retirement-tax-rate" type="text" placeholder="8%">
                     </div>
                 </div>
                 <button type="submit" class="submit">Calculate</button>
