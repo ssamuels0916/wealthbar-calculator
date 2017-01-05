@@ -1,5 +1,5 @@
 {
-    "name": "WealthBar TFSA and RRSP Calculator",
+    "name": "wealthBar tfsa and rrsp calculator",
     "version": "1.0.0",
     "description": "Financial tool to compare TFSA and RRSP",
     "main": "gulpfile.js",
