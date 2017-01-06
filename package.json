@@ -1,10 +1,14 @@
 {
-    "name": "WealthBar TFSA and RRSP Calculator",
+    "name": "wealthbartfsaandrrspcalculator",
     "version": "1.0.0",
     "description": "Financial tool to compare TFSA and RRSP",
     "main": "gulpfile.js",
     "scripts": {
         "test": "start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ssamuels0916/wealthbar-calculator.git"
     },
     "author": "Sharifa",
     "license": "ISC",
